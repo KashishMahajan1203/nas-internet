@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, ArrowUpRight } from "lucide-react";
 
+
 function Footer() {
   return (
     <footer className="bg-[#091b33] px-6 pt-16 pb-8 text-white lg:px-8">
@@ -33,11 +34,11 @@ function Footer() {
           <h3 className="text-lg font-bold">Services</h3>
 
           <div className="mt-6 flex flex-col gap-4 text-sm text-slate-400">
-            <p>Internet Leased Line</p>
-            <p>Mix Bandwidth</p>
-            <p>Point to Point(NLD)</p>
-            <p>LCO Partner Solutions</p>
-            <p>Dark Fibre</p>
+            <Link to="/services/1">Internet Leased Line</Link>
+            <Link to="/services/2">Mix Bandwidth</Link>
+            <Link to="/services/3">Point to Point (NLD)</Link>
+            <Link to="/services/4">LCO Partner Solutions</Link>
+            <Link to="/services/5">Dark Fibre</Link>
           </div>
         </div>
 
@@ -58,7 +59,7 @@ function Footer() {
             </a>
           </div>
 
-         
+
         </div>
 
       </div>
