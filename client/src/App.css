@@ -1,2 +1,79 @@
 @import "tailwindcss";
 
+/* ---------- Scroll reveal ----------
+   Add data-reveal (optionally ="left" | "right" | "zoom") to any element.
+   Use style={{ "--d": "150ms" }} to stagger. The hook in App adds .is-visible. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition-property: opacity, transform, translate, scale, box-shadow, border-color, background-color, color;
+  transition-duration: 0.8s, 0.8s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Delay only the entrance, so hover effects stay instant */
+  transition-delay: var(--d, 0ms), var(--d, 0ms), 0s, 0s, 0s, 0s, 0s, 0s;
+}
+[data-reveal="left"] { transform: translateX(-40px); }
+[data-reveal="right"] { transform: translateX(40px); }
+[data-reveal="zoom"] { transform: scale(0.92); }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Page fade-in on route change ---------- */
+@keyframes page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.page-enter { animation: page-in 0.4s ease-out; }
+
+/* ---------- Decorative loops ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.float { animation: float 6s ease-in-out infinite; }
+.float-slow { animation: float 9s ease-in-out infinite; }
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: spin-slow 40s linear infinite; }
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite; }
+
+@keyframes gradient-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.gradient-pan {
+  background-size: 200% 200%;
+  animation: gradient-pan 8s ease infinite;
+}
+
+@keyframes shine {
+  from { transform: translateX(-120%) skewX(-20deg); }
+  to { transform: translateX(260%) skewX(-20deg); }
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: translateX(-120%) skewX(-20deg);
+  pointer-events: none;
+}
+.shine:hover::after { animation: shine 0.9s ease; }
+
+/* Respect users who turn off motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .page-enter, .float, .float-slow, .spin-slow, .pulse-ring, .gradient-pan, .shine:hover::after {
+    animation: none;
+  }
+}
