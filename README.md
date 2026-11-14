@@ -48,3 +48,16 @@ npm install --save-dev @eslint/js@^10.0.1 @types/react@^19.3.0 @types/react-dom@
 ```
 
 For a normal setup, use `npm install` instead; it installs the dependencies and versions recorded in `package.json` and `package-lock.json`.
+
+
+## 📞 Contact
+
+For queries or collaboration opportunities, reach out via:
+
+* **Email:** [kashishmahajan878@gmail.com](kashishmahajan878@gmail.com)
+* **LinkedIn:** [https://www.linkedin.com/in/kashish-mahajan-0591ba2b4/](https://www.linkedin.com/in/kashish-mahajan-0591ba2b4/)
+* **GitHub:** [https://github.com/KashishMahajan1203](https://github.com/KashishMahajan1203)
+
+---
+
+*Developed with 💡 and passion by **Kashish Mahajan***
