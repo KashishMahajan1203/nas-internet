@@ -2,6 +2,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/NAS Logo.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +22,7 @@ function Header() {
         {/* Logo */}
         <Link to="/" className="flex shrink-0 items-center gap-[14px]">
           <div className="flex h-[30px] w-[48px] items-center justify-center rounded-full border-b-[3px] border-green-500">
-            <span className="text-[17px] font-extrabold italic text-red-500">
-              NAS
-            </span>
+            <img src={logo} alt="NAS Logo" className="h-full w-full object-contain" />
           </div>
 
           <span className="text-[20.8px] font-extrabold tracking-tight text-[#55aaf0]">

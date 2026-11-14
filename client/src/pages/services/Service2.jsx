@@ -173,12 +173,12 @@ const Service2 = () => {
                                 {specifications.map(([label, value]) => (
                                     <div
                                         key={label}
-                                        className="flex items-start justify-between gap-4 border-b border-dashed border-slate-200 pb-4 last:border-0"
+                                        className="flex flex-col gap-1 border-b border-dashed border-slate-200 pb-4 last:border-0 sm:flex-row sm:items-start sm:justify-between sm:gap-4"
                                     >
                                         <span className="text-sm text-slate-500">
                                             {label}
                                         </span>
-                                        <span className="max-w-[60%] text-right text-sm font-semibold text-slate-900">
+                                        <span className="max-w-full break-words text-left text-sm font-semibold text-slate-900 sm:max-w-[60%] sm:text-right">
                                             {value}
                                         </span>
                                     </div>

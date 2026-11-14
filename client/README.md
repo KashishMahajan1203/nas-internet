@@ -1,16 +1,50 @@
-# React + Vite
+# NAS Internet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responsive React website for NAS Internet, built with Vite. It includes the home, services, about, and contact pages, plus detailed pages for each service.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js `^20.19.0` or `>=22.12.0`
+- npm (comes with Node.js)
 
-## React Compiler
+## Run locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+From the project root, run:
 
-## Expanding the ESLint configuration
+```bash
+cd client
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Then open the URL printed in the terminal (usually `http://localhost:5173`).
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server with hot reload. |
+| `npm run build` | Create the production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. Run `npm run build` first. |
+| `npm run lint` | Check the client source with ESLint. |
+
+## Dependencies
+
+Install all dependencies from the `client` directory with:
+
+```bash
+npm install
+```
+
+This installs all packages listed in `package.json` using the versions locked in `package-lock.json`; you do not need to install them one by one.
+
+### Install packages manually
+
+If you are setting up dependencies manually, run these commands from the `client` directory:
+
+```bash
+npm install @react-three/fiber@^9.8.2 @tailwindcss/vite@^4.3.4 axios@^1.21.0 lucide-react@^1.68.0 react@^19.3.1 react-dom@^19.3.1 react-router-dom@^7.18.5 tailwindcss@^4.3.4 three@^0.187.0
+npm install --save-dev @eslint/js@^10.0.1 @types/react@^19.3.0 @types/react-dom@^19.3.0 @vitejs/plugin-react@^6.1.2 eslint@^10.13.0 eslint-plugin-react-hooks@^7.1.1 eslint-plugin-react-refresh@^0.5.7 globals@^17.13.0 vite@^8.3.5
+```
+
+For a normal setup, use `npm install` instead; it installs the dependencies and versions recorded in `package.json` and `package-lock.json`.

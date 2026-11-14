@@ -1,349 +1,290 @@
 
 import { Link } from "react-router-dom";
 import {
-  ShieldCheck,
-  Headset,
-  Globe,
-  Users,
-  Network,
-  Zap,
   ArrowRight,
-  CheckCircle2,
+  ArrowUpRight,
+  Network,
+  Globe,
+  RadioTower,
+  Activity,
+  Wifi,
 } from "lucide-react";
 
 const About = () => {
-  const stats = [
-    {
-      icon: ShieldCheck,
-      value: "99.9%",
-      label: "UPTIME SLA",
-      color: "text-blue-600",
-      bg: "bg-blue-50",
-    },
-    {
-      icon: Headset,
-      value: "24/7",
-      label: "SUPPORT",
-      color: "text-cyan-500",
-      bg: "bg-cyan-50",
-    },
-    {
-      icon: Globe,
-      value: "10G+",
-      label: "BACKBONE",
-      color: "text-purple-500",
-      bg: "bg-purple-50",
-    },
-    {
-      icon: Users,
-      value: "500+",
-      label: "LCO PARTNERS",
-      color: "text-emerald-500",
-      bg: "bg-emerald-50",
-    },
-  ];
-
-  const industries = [
-    "ISPs",
-    "LCOs",
-    "Corporates",
-    "Institutions",
-    "Data Centers",
-  ];
-
-  const features = [
-    {
-      icon: Network,
-      title: "Enterprise Connectivity",
-      description:
-        "High-performance connectivity solutions built for demanding business environments.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Reliable Infrastructure",
-      description:
-        "Our network infrastructure focuses on uptime, stability and consistent performance.",
-    },
-    {
-      icon: Zap,
-      title: "Dedicated Support",
-      description:
-        "Proactive monitoring and a responsive support team to keep your network running.",
-    },
-  ];
-
   return (
-    <div className="w-full overflow-hidden bg-white">
+    <div className="overflow-hidden bg-white">
 
-      {/* ================= HERO SECTION ================= */}
+      {/* HERO */}
+      <section className="relative min-h-[560px] overflow-hidden bg-[#070D1C] px-4 py-16 sm:min-h-[620px] sm:px-8 sm:py-20 lg:px-20 lg:py-24">
 
-      <section className="relative flex min-h-[365px] items-center justify-center overflow-hidden bg-[#080E20] px-5 py-20 text-center">
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[130px]" />
 
-        {/* Network background effects */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="spin-slow absolute -left-20 top-10 h-96 w-96 rounded-full border border-dashed border-blue-400/30" />
-          <div className="float-slow absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full border border-cyan-400/20" />
-          <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-400/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.2),transparent_65%)]" />
-        </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080E20]/50 via-[#080E20]/75 to-[#080E20]/95" />
+          <div data-reveal="left" className="min-w-0">
+            <p className="mb-6 text-sm font-bold uppercase tracking-[4px] text-cyan-400">
+              About NAS Internet
+            </p>
 
-        <div className="relative z-10 mx-auto max-w-5xl">
+            <h1 className="text-4xl font-extrabold leading-[1.15] text-white sm:text-5xl md:text-6xl lg:text-6xl">
+              Powering the Backbone of
 
-          <span data-reveal className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-bold tracking-wider text-cyan-400 backdrop-blur-md">
-            OUR STORY
-          </span>
+              <span className="block text-blue-500">
+                Modern Connectivity
 
-          <h1 data-reveal style={{ "--d": "100ms" }} className="mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Powering the Backbone of
-            <span className="gradient-pan block bg-gradient-to-r from-sky-400 via-indigo-400 to-sky-400 bg-clip-text text-transparent">
-              Modern Connectivity
-            </span>
-          </h1>
+              </span>
+            </h1>
 
-          <p data-reveal style={{ "--d": "200ms" }} className="mx-auto mt-5 max-w-3xl text-base leading-7 text-gray-300 sm:text-lg">
-            NAS Internet provides carrier-grade internet and network
-            connectivity, focused on performance, uptime, and dedicated
-            support for the businesses that rely on us.
-          </p>
+            <p className="mt-7 max-w-lg text-lg leading-8 text-slate-400">
+              NAS Internet provides carrier-grade internet and network connectivity, focused on performance, uptime, and dedicated support for the businesses that rely on us.
 
+
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                to="/contact"
+                className="flex items-center gap-3 rounded-full bg-blue-600 px-7 py-4 font-semibold text-white transition hover:bg-blue-500"
+              >
+                Let's Connect <ArrowRight size={18} />
+              </Link>
+
+              <Link
+                to="/services"
+                className="flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+              >
+                Our Services <ArrowUpRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          {/* NETWORK VISUAL */}
+          <div data-reveal="zoom" className="relative mx-auto flex h-[340px] w-full max-w-[450px] min-w-0 items-center justify-center sm:h-[420px]">
+
+            <div className="absolute h-[280px] w-[280px] rounded-full border border-blue-400/20 sm:h-[350px] sm:w-[350px]" />
+            <div className="absolute h-[220px] w-[220px] rounded-full border border-dashed border-cyan-400/30 sm:h-[280px] sm:w-[280px]" />
+            <div className="absolute h-[165px] w-[165px] rounded-full border border-blue-400/30 sm:h-[210px] sm:w-[210px]" />
+
+            <div className="absolute h-60 w-60 rounded-full bg-blue-500/20 blur-3xl" />
+
+            <div className="relative z-10 flex h-32 w-32 items-center justify-center rounded-[35px] border border-cyan-300/30 bg-gradient-to-br from-blue-600 to-cyan-400 shadow-[0_0_70px_rgba(37,99,235,0.4)]">
+              <Network size={65} className="text-white" />
+            </div>
+
+            <div className="absolute left-8 top-12 rounded-2xl border border-white/10 bg-[#111D35] p-4 text-cyan-400 shadow-xl">
+              <Globe size={28} />
+            </div>
+
+            <div className="absolute right-5 top-20 rounded-2xl border border-white/10 bg-[#111D35] p-4 text-blue-400 shadow-xl">
+              <RadioTower size={28} />
+            </div>
+
+            <div className="absolute bottom-12 left-8 rounded-2xl border border-white/10 bg-[#111D35] p-4 text-cyan-400 shadow-xl">
+              <Wifi size={28} />
+            </div>
+
+            <div className="absolute bottom-8 right-8 rounded-2xl border border-white/10 bg-[#111D35] p-4 text-blue-400 shadow-xl">
+              <Activity size={28} />
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* OUR STORY */}
+      <section className="px-4 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-14 lg:grid-cols-2 lg:gap-16">
 
-      {/* ================= ENTERPRISE RELIABILITY ================= */}
+          <div data-reveal="left" className="relative min-w-0">
+            <div className="rounded-[30px] bg-[#0B1530] p-6 text-white sm:p-8 lg:p-12">
 
-      <section className="bg-white px-5 py-16 sm:px-10 lg:px-20 lg:py-20">
+              {/* <span className="text-sm font-bold tracking-[3px] text-cyan-400">
+                OUR STORY
+              </span> */}
 
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
-
-          {/* LEFT CONTENT */}
-
-          <div data-reveal="left">
-
-            <h2 className="text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl">
-              Enterprise-Grade Reliability
-            </h2>
-
-            <div className="mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-sky-400 to-blue-600" />
-
-            <p className="mt-6 text-base leading-7 text-slate-600">
-              Our infrastructure is designed from the ground up to
-              handle high-demand environments. Whether you're an ISP,
-              enterprise, or institution, you need reliable bandwidth
-              and low-latency links.
-            </p>
-
-            <p className="mt-5 text-base leading-7 text-slate-600">
-              Every link we provision comes with strict SLAs, proactive
-              monitoring, and a support team that responds — not just
-              acknowledges. We work closely with LCOs, businesses, and
-              organizations that require absolutely stable and scalable
-              connectivity to keep their operations running smoothly
-              without interruption.
-            </p>
-
-            {/* Industry tags */}
-
-            <div className="mt-7 flex flex-wrap gap-3">
-
-              {industries.map((item, index) => (
-                <span
-                  key={index}
-                  className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
-                >
-                  {item}
+              <h2 className="mt-8 text-4xl font-bold leading-tight sm:text-5xl">
+                Connectivity is
+                <span className="block text-blue-400">
+                  Our Foundation.
                 </span>
-              ))}
+              </h2>
 
+              <p className="mt-7 leading-8 text-slate-300">
+                We work closely with LCOs, businesses, and organizations that require absolutely stable and scalable connectivity to keep their operations running smoothly without interruption.
+              </p>
+
+              {/* <div className="mt-8 flex flex-col items-start gap-3 border-t border-white/10 pt-6 sm:mt-10 sm:flex-row sm:items-center sm:gap-4 sm:pt-7">
+                <ShieldCheck size={35} className="shrink-0 text-cyan-400" />
+                <div className="min-w-0">
+                  <h3 className="font-bold">Built Around Reliability</h3>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Connectivity for demanding business needs.
+                  </p>
+                </div>
+              </div> */}
             </div>
-
           </div>
 
+          <div data-reveal="right" className="min-w-0">
+            <p className="text-sm font-bold uppercase tracking-[3px] text-blue-600">
+              Who We Are
+            </p>
 
-          {/* RIGHT VISUAL */}
+            {/* <h2 className="mt-5 text-4xl font-extrabold leading-tight text-[#0B1224] sm:text-5xl">
+              More Than Just
+              <span className="block text-blue-600">
+                Internet Connectivity
+              </span>
+            </h2> */}
 
-          <div data-reveal="zoom" style={{ "--d": "150ms" }} className="relative flex min-h-[340px] items-center justify-center">
+            {/* {/* <p className="mt-7 leading-8 text-slate-600">
+              We understand that businesses need more than just
+              an internet connection. They need stable networks,
+              scalable bandwidth and responsive technical support.
+            </p> */}
 
-            {/* Central network illustration */}
+            {/* <p className="mt-5 leading-8 text-slate-600">
+            Our infrastructure is designed from the ground up to handle high-demand environments. Whether you're an ISP, enterprise, or institution, you need reliable bandwidth and low-latency links.
+            </p>  */}
 
-            <div className="relative flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:mt-9 sm:gap-6">
 
-              <div className="spin-slow absolute inset-5 rounded-full border border-dashed border-blue-200" />
-              <div className="absolute inset-10 rounded-full border border-blue-100" />
-
-              <div className="relative flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 to-sky-400 shadow-2xl shadow-blue-300/50">
-                <span className="pulse-ring absolute inset-0 rounded-3xl ring-2 ring-blue-400/60" />
-                <Network size={45} className="text-white" />
+              <div className="border-l-4 border-blue-600 pl-4">
+                <h3 className="text-2xl font-extrabold text-[#0B1224]">
+                  99.9%
+                </h3>
+                <p className="mt-1 text-sm text-slate-500">
+                  Uptime SLA
+                </p>
               </div>
 
-              <div className="absolute left-2 top-14 h-3 w-3 rounded-full bg-blue-400" />
-              <div className="absolute right-5 top-16 h-3 w-3 rounded-full bg-cyan-400" />
-              <div className="absolute bottom-8 left-16 h-3 w-3 rounded-full bg-indigo-400" />
+              <div className="border-l-4 border-sky-500 pl-4">
+                <h3 className="text-2xl font-extrabold text-[#0B1224]">
+                  24/7
 
-            </div>
+                </h3>
+                <p className="mt-1 text-sm text-slate-500">
+                  Support
 
-            {/* Floating statistics */}
+                </p>
+              </div>
 
-            <div className="float absolute left-0 top-5 rounded-2xl bg-white px-5 py-4 shadow-xl shadow-slate-200/70">
-              <h3 className="text-3xl font-extrabold text-blue-600">
-                100%
-              </h3>
-              <p className="text-xs font-bold tracking-wide text-slate-500">
-                DEDICATED SUPPORT
-              </p>
-            </div>
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h3 className="text-2xl font-extrabold text-[#0B1224]">
+                  10G+
+                </h3>
+                <p className="mt-1 text-sm text-slate-500">
+                  Backbone
+                </p>
+              </div>
 
-            <div className="float-slow absolute bottom-5 right-0 rounded-2xl bg-white px-5 py-4 shadow-xl shadow-slate-200/70">
-              <h3 className="text-3xl font-extrabold text-blue-600">
-                0%
-              </h3>
-              <p className="text-xs font-bold tracking-wide text-slate-500">
-                DOWNTIME TOLERANCE
-              </p>
+              <div className="border-l-4 border-green-500 pl-4">
+                <h3 className="text-2xl font-extrabold text-[#0B1224]">
+                  500+
+                </h3>
+                <p className="mt-1 text-sm text-slate-500">
+                  LCO Partners
+                </p>
+              </div>
+
             </div>
 
           </div>
 
         </div>
+
       </section>
 
-
-      {/* ================= COMPANY STATISTICS ================= */}
-
-      <section className="bg-[#F7FAFF] px-5 py-20 sm:px-10 lg:px-20">
-
+      {/* OUR EXPERTISE */}
+      {/* <section className="bg-[#F4F7FC] px-4 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
 
-          <div data-reveal className="mx-auto mb-12 max-w-2xl text-center">
+          <div className="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[3px] text-blue-600">
+                What Drives Us
+              </p>
 
-            <h2 className="text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl">
-              The Numbers That Define Us
-            </h2>
+              <h2 className="mt-4 text-4xl font-extrabold text-[#0B1224] sm:text-5xl">
+                Our Core Strengths
+              </h2>
+            </div>
 
-            <p className="mt-4 text-base leading-6 text-slate-600">
-              Our commitment to excellence is reflected in the metrics
-              that matter most to your business.
+            <p className="max-w-md leading-7 text-slate-500">
+              Technology, infrastructure and support come together
+              to deliver dependable connectivity solutions.
             </p>
-
           </div>
 
-          {/* Statistics cards */}
+          <div className="grid gap-5 md:grid-cols-3">
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-            {stats.map((item, index) => {
+            {[
+              {
+                icon: Network,
+                title: "Advanced Network",
+                text: "Scalable network connectivity designed for high-demand environments.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Reliable Infrastructure",
+                text: "Infrastructure focused on network stability and consistent performance.",
+              },
+              {
+                icon: Zap,
+                title: "Responsive Support",
+                text: "Dedicated technical support to help keep your network running.",
+              },
+            ].map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={index}
-                  data-reveal
-                  style={{ "--d": `${index * 100}ms` }}
-                  className="group flex min-h-[205px] flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-7 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50"
+                  className="group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
                 >
-
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${item.bg} transition duration-300 group-hover:scale-110`}>
-                    <Icon size={28} className={item.color} />
-                  </div>
-
-                  <h3 className={`mt-5 text-4xl font-extrabold ${item.color}`}>
-                    {item.value}
-                  </h3>
-
-                  <p className="mt-1 text-xs font-bold tracking-wide text-slate-600">
-                    {item.label}
-                  </p>
-
-                </div>
-              );
-            })}
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* ================= WHY CHOOSE NAS ================= */}
-
-      <section className="bg-white px-5 py-20 sm:px-10 lg:px-20">
-
-        <div className="mx-auto max-w-7xl">
-
-          <div data-reveal className="mx-auto mb-12 max-w-2xl text-center">
-
-            <span className="text-sm font-bold uppercase tracking-widest text-blue-600">
-              Why NAS Internet
-            </span>
-
-            <h2 className="mt-3 text-3xl font-extrabold text-[#111827] sm:text-4xl">
-              Connectivity You Can Depend On
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              We combine reliable infrastructure, network expertise
-              and dedicated support to deliver dependable connectivity.
-            </p>
-
-          </div>
-
-          <div className="grid gap-7 md:grid-cols-3">
-
-            {features.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={index}
-                  data-reveal
-                  style={{ "--d": `${index * 120}ms` }}
-                  className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
-                >
-
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
                     <Icon size={27} />
                   </div>
 
-                  <h3 className="mt-6 text-xl font-bold text-[#111827]">
+                  <h3 className="mt-8 text-xl font-bold text-[#0B1224]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-slate-500">
-                    {item.description}
+                  <p className="mt-4 leading-7 text-slate-500">
+                    {item.text}
                   </p>
 
+                  <div className="mt-7 flex items-center gap-2 text-sm font-bold text-blue-600">
+                    Explore More <ArrowUpRight size={17} />
+                  </div>
                 </div>
               );
             })}
 
           </div>
-
         </div>
-      </section>
+      </section> */}
 
+      {/* CTA */}
+      <section className="bg-[#070D1C] px-4 py-16 text-center sm:px-8 sm:py-20 lg:px-20 lg:py-24">
+        <div className="mx-auto max-w-3xl min-w-0">
 
-      {/* ================= CTA SECTION ================= */}
+          <p className="text-sm font-bold uppercase tracking-[3px] text-cyan-400">
+            Let's Build Together
+          </p>
 
-      <section className="bg-[#F7FAFF] px-5 py-16 sm:px-10 lg:px-20">
-
-        <div data-reveal="zoom" className="gradient-pan mx-auto max-w-7xl rounded-[22px] bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600 px-6 py-16 text-center text-white shadow-2xl shadow-blue-200/60 sm:px-12">
-
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
-            Ready to upgrade your infrastructure?
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Ready to Connect Your Business?
           </h2>
 
-          <p className="mt-4 text-base text-white/90">
-            Let's design a custom connectivity solution for your exact needs.
+          <p className="mt-5 leading-7 text-slate-400">
+            Talk to our team about your connectivity requirements.
           </p>
 
           <Link
             to="/contact"
-            className="shine relative overflow-hidden mt-8 inline-flex items-center gap-3 rounded-full bg-white px-9 py-3.5 font-bold text-blue-600 shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-blue-50"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-blue-600 px-6 py-3.5 font-bold text-white transition hover:bg-blue-500 sm:mt-9 sm:px-8 sm:py-4"
           >
-            Contact Our Team
-            <ArrowRight size={19} />
+            Contact Us <ArrowRight size={18} />
           </Link>
 
         </div>

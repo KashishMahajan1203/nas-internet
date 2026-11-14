@@ -14,8 +14,7 @@ function Footer() {
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-slate-400">
-            Carrier-grade internet and network connectivity for
-            LCOs, businesses and institutions across India.
+            Carrier-grade internet & network connectivity for LCOs, businesses, and institutions across India.
           </p>
         </div>
 
@@ -66,7 +65,7 @@ function Footer() {
 
       <div className="mx-auto mt-14 max-w-7xl border-t border-white/10 pt-7 text-center">
         <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} NAS Internet. All Rights Reserved.
+          © 2025 NAS Internet. All Rights Reserved.
         </p>
       </div>
     </footer>
